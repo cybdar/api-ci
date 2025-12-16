@@ -5,24 +5,20 @@ plugins {
 group = 'ru.netology.api-ci'
 version = '1.0-SNAPSHOT'
 
-java {
-    sourceCompatibility = 11
-}
-compileJava.options.encoding = "UTF-8"
-compileTestJava.options.encoding = "UTF-8"
+sourceCompatibility = 11
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
 
 repositories {
     maven {
-        url "http://repo1.maven.org/maven2"
-        allowInsecureProtocol = true
+        url 'https://repo.maven.apache.org/maven2'
     }
-    mavenCentral()
 }
 
 dependencies {
     testImplementation 'io.rest-assured:rest-assured:5.5.0'
-    testImplementation 'io.rest-assured:json-schema-validator:5.5.0'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testImplementation 'io.rest-assured:json-schema-validator:5.5.0'
 }
 
 test {
